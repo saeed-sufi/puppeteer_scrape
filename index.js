@@ -25,12 +25,12 @@ const cron = require('node-cron')
       return imgs.map(x => x.src)
     })
 
-    // await page.type("#ourfield", "blue")
-    // await Promise.all([page.click("#ourform button"), page.waitForNavigation()])
+    await page.type("#ourfield", "blue")
+    await Promise.all([page.click("#ourform button"), page.waitForNavigation()])
 
-    // const info = await page.$eval("#message", el => el.textContent)
+    const info = await page.$eval("#message", el => el.textContent)
 
-    // console.log(info)
+    console.log(info)
 
     // We use 'for of' instead of 'forEach' because we can use 'await' inside of 'for of'
     // By the way be aware that the following code is changing the page that chrome is pointing toward.
@@ -44,4 +44,5 @@ const cron = require('node-cron')
 
 // setInterval(start, 1000)
 // cron.schedule("*/5 * * * * *", start)
+// module.exports =  start 
 start()
